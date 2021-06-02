@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Welcome</title>
+    <url>/2021/05/10/Welcome/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Java重写和重载</title>
     <url>/2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/</url>
     <content><![CDATA[]]></content>
@@ -22,10 +27,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Welcome</title>
-    <url>/2021/05/10/Welcome/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
