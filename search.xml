@@ -8,6 +8,12 @@
 <h2 id="2-重载-Overload"><a href="#2-重载-Overload" class="headerlink" title="2.重载(Overload)"></a>2.重载(Overload)</h2><p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。<br>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。<br>最常用的地方就是构造器的重载。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）被重载的方法必须改变参数列表(参数个数或类型不一样)；</span><br><span class="line">2）被重载的方法可以改变返回类型；</span><br><span class="line">3）被重载的方法可以改变访问修饰符；</span><br><span class="line">4）被重载的方法可以声明新的或更广的检查异常；</span><br><span class="line">5）方法能够在同一个类中或者在一个子类中被重载。</span><br><span class="line">6）无法以返回值类型作为重载函数的区分标准。</span><br></pre></td></tr></table></figure>
 <h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）方法重载是一个类中定义了多个方法名相同,而他们的参数的数量不同或数量相同而类型和次序不同,则称为方法的重载(Overloading)。</span><br><span class="line">2）方法重写是在子类存在方法与父类的方法的名字相同,而且参数的个数与类型一样,返回值也一样的方法,就称为重写(Overriding)。</span><br><span class="line">3）方法重载是一个类的多态性表现,而方法重写是子类与父类的一种多态性表现。</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java相关知识</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -26,13 +32,22 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>测试用例</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
   </entry>
   <entry>
     <title>Welcome</title>
     <url>/2021/05/10/Welcome/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>xxx</category>
+        <category>测试用例</category>
       </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
   </entry>
 </search>
