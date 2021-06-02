@@ -41,10 +41,12 @@
     <link href="http://example.com/2021/05/10/Welcome/"/>
     <id>http://example.com/2021/05/10/Welcome/</id>
     <published>2021-05-10T09:05:28.000Z</published>
-    <updated>2021-05-10T09:05:28.952Z</updated>
+    <updated>2021-06-02T14:10:58.675Z</updated>
     
     
     
+    
+    <category term="xxx" scheme="http://example.com/categories/xxx/"/>
     
     
   </entry>
