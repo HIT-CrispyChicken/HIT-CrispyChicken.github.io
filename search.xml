@@ -1,107 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Java抽象类</title>
-      <link href="2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
-      <url>2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-      
-        <content type="html"><![CDATA[<h1 id="抽象类（相关知识）"><a href="#抽象类（相关知识）" class="headerlink" title="抽象类（相关知识）"></a>抽象类（相关知识）</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。<br>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。<br>由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。<br>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。<br>在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。</p><h2 id="2-抽象方法"><a href="#2-抽象方法" class="headerlink" title="2.抽象方法"></a>2.抽象方法</h2><p>如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。<br>Abstract 关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。<br>抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果一个类包含抽象方法，那么该类必须是抽象类。</span><br><span class="line">任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</span><br></pre></td></tr></table></figure><p>继承抽象方法的子类必须重写该方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该抽象方法，否则，从最初的父类到最终的子类都不能用来实例化对象。</p><h2 id="3-抽象类总结规定"><a href="#3-抽象类总结规定" class="headerlink" title="3.抽象类总结规定"></a>3.抽象类总结规定</h2><ol><li>抽象类不能被实例化(初学者很容易犯的错)，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li><li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li><li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。</li><li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li><li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。</li></ol>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Java重写和重载</title>
+    <url>/2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="重写和重载（相关知识点）"><a href="#重写和重载（相关知识点）" class="headerlink" title="重写和重载（相关知识点）"></a>重写和重载（相关知识点）</h1><h2 id="1-重写-Override"><a href="#1-重写-Override" class="headerlink" title="1.重写(Override)"></a>1.重写(Override)</h2><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！<br>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。例如： 父类的一个方法申明了一个检查异常 IOException，但是在重写这个方法的时候不能抛出 Exception 异常，因为 Exception 是 IOException 的父类，只能抛出 IOException 的子类异常。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）参数列表与被重写方法的参数列表必须完全相同。</span><br><span class="line">2）返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</span><br><span class="line">3）访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</span><br><span class="line">4）父类的成员方法只能被它的子类重写。</span><br><span class="line">5）声明为 final 的方法不能被重写。</span><br><span class="line">6）声明为 static 的方法不能被重写，但是能够被再次声明。</span><br><span class="line">7）子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</span><br><span class="line">8）子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</span><br><span class="line">9）重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</span><br><span class="line">10）构造方法不能被重写。</span><br><span class="line">11）如果不能继承一个类，则不能重写该类的方法。</span><br></pre></td></tr></table></figure>
+<h2 id="2-重载-Overload"><a href="#2-重载-Overload" class="headerlink" title="2.重载(Overload)"></a>2.重载(Overload)</h2><p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。<br>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。<br>最常用的地方就是构造器的重载。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）被重载的方法必须改变参数列表(参数个数或类型不一样)；</span><br><span class="line">2）被重载的方法可以改变返回类型；</span><br><span class="line">3）被重载的方法可以改变访问修饰符；</span><br><span class="line">4）被重载的方法可以声明新的或更广的检查异常；</span><br><span class="line">5）方法能够在同一个类中或者在一个子类中被重载。</span><br><span class="line">6）无法以返回值类型作为重载函数的区分标准。</span><br></pre></td></tr></table></figure>
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）方法重载是一个类中定义了多个方法名相同,而他们的参数的数量不同或数量相同而类型和次序不同,则称为方法的重载(Overloading)。</span><br><span class="line">2）方法重写是在子类存在方法与父类的方法的名字相同,而且参数的个数与类型一样,返回值也一样的方法,就称为重写(Overriding)。</span><br><span class="line">3）方法重载是一个类的多态性表现,而方法重写是子类与父类的一种多态性表现。</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-          
-          <category> Java学习 </category>
-          
+        <category>Java学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java重写和重载</title>
-      <link href="2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/"/>
-      <url>2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/</url>
-      
-        <content type="html"><![CDATA[<h1 id="重写和重载（相关知识点）"><a href="#重写和重载（相关知识点）" class="headerlink" title="重写和重载（相关知识点）"></a>重写和重载（相关知识点）</h1><h2 id="1-重写-Override"><a href="#1-重写-Override" class="headerlink" title="1.重写(Override)"></a>1.重写(Override)</h2><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！<br>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。例如： 父类的一个方法申明了一个检查异常 IOException，但是在重写这个方法的时候不能抛出 Exception 异常，因为 Exception 是 IOException 的父类，只能抛出 IOException 的子类异常。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1）参数列表与被重写方法的参数列表必须完全相同。</span><br><span class="line">2）返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</span><br><span class="line">3）访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</span><br><span class="line">4）父类的成员方法只能被它的子类重写。</span><br><span class="line">5）声明为 final 的方法不能被重写。</span><br><span class="line">6）声明为 static 的方法不能被重写，但是能够被再次声明。</span><br><span class="line">7）子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</span><br><span class="line">8）子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</span><br><span class="line">9）重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</span><br><span class="line">10）构造方法不能被重写。</span><br><span class="line">11）如果不能继承一个类，则不能重写该类的方法。</span><br></pre></td></tr></table></figure><h2 id="2-重载-Overload"><a href="#2-重载-Overload" class="headerlink" title="2.重载(Overload)"></a>2.重载(Overload)</h2><p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。<br>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。<br>最常用的地方就是构造器的重载。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1）被重载的方法必须改变参数列表(参数个数或类型不一样)；</span><br><span class="line">2）被重载的方法可以改变返回类型；</span><br><span class="line">3）被重载的方法可以改变访问修饰符；</span><br><span class="line">4）被重载的方法可以声明新的或更广的检查异常；</span><br><span class="line">5）方法能够在同一个类中或者在一个子类中被重载。</span><br><span class="line">6）无法以返回值类型作为重载函数的区分标准。</span><br></pre></td></tr></table></figure><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1）方法重载是一个类中定义了多个方法名相同,而他们的参数的数量不同或数量相同而类型和次序不同,则称为方法的重载(Overloading)。</span><br><span class="line">2）方法重写是在子类存在方法与父类的方法的名字相同,而且参数的个数与类型一样,返回值也一样的方法,就称为重写(Overriding)。</span><br><span class="line">3）方法重载是一个类的多态性表现,而方法重写是子类与父类的一种多态性表现。</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>重写和重载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java抽象类</title>
+    <url>/2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<h1 id="抽象类（相关知识）"><a href="#抽象类（相关知识）" class="headerlink" title="抽象类（相关知识）"></a>抽象类（相关知识）</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。<br>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。<br>由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。<br>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。<br>在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。</p>
+<h2 id="2-抽象方法"><a href="#2-抽象方法" class="headerlink" title="2.抽象方法"></a>2.抽象方法</h2><p>如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。<br>Abstract 关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。<br>抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">如果一个类包含抽象方法，那么该类必须是抽象类。</span><br><span class="line">任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</span><br></pre></td></tr></table></figure>
+<p>继承抽象方法的子类必须重写该方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该抽象方法，否则，从最初的父类到最终的子类都不能用来实例化对象。</p>
+<h2 id="3-抽象类总结规定"><a href="#3-抽象类总结规定" class="headerlink" title="3.抽象类总结规定"></a>3.抽象类总结规定</h2><ol>
+<li>抽象类不能被实例化(初学者很容易犯的错)，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li>
+<li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li>
+<li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。</li>
+<li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li>
+<li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。</li>
+</ol>
+]]></content>
       <categories>
-          
-          <category> Java学习 </category>
-          
+        <category>Java学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 重写和重载 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Welcome</title>
-      <link href="2021/05/10/Welcome/"/>
-      <url>2021/05/10/Welcome/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>抽象类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/05/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
       <categories>
-          
-          <category> 测试 </category>
-          
+        <category>初始博客</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="2021/05/09/hello-world/"/>
-      <url>2021/05/09/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>initial blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Welcome</title>
+    <url>/2021/05/10/Welcome/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 初始博客 </category>
-          
+        <category>测试</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> initial blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
 </search>
