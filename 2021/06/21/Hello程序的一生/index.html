@@ -1,81 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Java抽象类</title>
-    <url>/2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<h1 id="抽象类（相关知识）"><a href="#抽象类（相关知识）" class="headerlink" title="抽象类（相关知识）"></a>抽象类（相关知识）</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>在面向对象的概念中，所有的对象都是通过类来描绘的，但是反过来，并不是所有的类都是用来描绘对象的，如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。<br>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。<br>由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。也是因为这个原因，通常在设计阶段决定要不要设计抽象类。<br>父类包含了子类集合的常见的方法，但是由于父类本身是抽象的，所以不能使用这些方法。<br>在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。</p>
-<h2 id="2-抽象方法"><a href="#2-抽象方法" class="headerlink" title="2.抽象方法"></a>2.抽象方法</h2><p>如果你想设计这样一个类，该类包含一个特别的成员方法，该方法的具体实现由它的子类确定，那么你可以在父类中声明该方法为抽象方法。<br>Abstract 关键字同样可以用来声明抽象方法，抽象方法只包含一个方法名，而没有方法体。<br>抽象方法没有定义，方法名后面直接跟一个分号，而不是花括号。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">如果一个类包含抽象方法，那么该类必须是抽象类。</span><br><span class="line">任何子类必须重写父类的抽象方法，或者声明自身为抽象类。</span><br></pre></td></tr></table></figure>
-<p>继承抽象方法的子类必须重写该方法。否则，该子类也必须声明为抽象类。最终，必须有子类实现该抽象方法，否则，从最初的父类到最终的子类都不能用来实例化对象。</p>
-<h2 id="3-抽象类总结规定"><a href="#3-抽象类总结规定" class="headerlink" title="3.抽象类总结规定"></a>3.抽象类总结规定</h2><ol>
-<li>抽象类不能被实例化(初学者很容易犯的错)，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li>
-<li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li>
-<li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。</li>
-<li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li>
-<li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java学习</category>
-      </categories>
-      <tags>
-        <tag>抽象类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Welcome</title>
-    <url>/2021/05/10/Welcome/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/05/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hello程序的一生 | Crispy Chicken</title><meta name="keywords" content="计算机系统 Hello程序 Linux系统"><meta name="author" content="Crispy Chicken"><meta name="copyright" content="Crispy Chicken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机系统 大作业 题   目 程序人生-Hello’s P2P      　 　 计算机科学与技术学院 2021年5月 摘  要 摘要是论文内容的高度概括，应具有独立性和自含性，即不阅读论文的全文，就能获得必要的信息。摘要应包括本论文的目的、主要内容、方法、成果及其理论与实际意义。摘要中不宜使用公式、结构式、图表和非公知公用的符号与术语，不标注引用文献编号，同时避免将摘要写成目录式的内容介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello程序的一生">
+<meta property="og:url" content="http://example.com/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/index.html">
+<meta property="og:site_name" content="Crispy Chicken">
+<meta property="og:description" content="计算机系统 大作业 题   目 程序人生-Hello’s P2P      　 　 计算机科学与技术学院 2021年5月 摘  要 摘要是论文内容的高度概括，应具有独立性和自含性，即不阅读论文的全文，就能获得必要的信息。摘要应包括本论文的目的、主要内容、方法、成果及其理论与实际意义。摘要中不宜使用公式、结构式、图表和非公知公用的符号与术语，不标注引用文献编号，同时避免将摘要写成目录式的内容介绍">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/06/03/vALs9yqZXQtlaGH.jpg">
+<meta property="article:published_time" content="2021-06-21T14:51:01.000Z">
+<meta property="article:modified_time" content="2021-06-21T14:53:24.426Z">
+<meta property="article:author" content="Crispy Chicken">
+<meta property="article:tag" content="计算机系统 Hello程序 Linux系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/06/03/vALs9yqZXQtlaGH.jpg"><link rel="shortcut icon" href="/img/1.png"><link rel="canonical" href="http://example.com/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hello程序的一生',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-06-21 22:53:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>初始博客</category>
-      </categories>
-      <tags>
-        <tag>initial blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java重写和重载</title>
-    <url>/2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/</url>
-    <content><![CDATA[<h1 id="重写和重载（相关知识点）"><a href="#重写和重载（相关知识点）" class="headerlink" title="重写和重载（相关知识点）"></a>重写和重载（相关知识点）</h1><h2 id="1-重写-Override"><a href="#1-重写-Override" class="headerlink" title="1.重写(Override)"></a>1.重写(Override)</h2><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！<br>重写的好处在于子类可以根据需要，定义特定于自己的行为。 也就是说子类能够根据需要实现父类的方法。<br>重写方法不能抛出新的检查异常或者比被重写方法申明更加宽泛的异常。例如： 父类的一个方法申明了一个检查异常 IOException，但是在重写这个方法的时候不能抛出 Exception 异常，因为 Exception 是 IOException 的父类，只能抛出 IOException 的子类异常。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）参数列表与被重写方法的参数列表必须完全相同。</span><br><span class="line">2）返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</span><br><span class="line">3）访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</span><br><span class="line">4）父类的成员方法只能被它的子类重写。</span><br><span class="line">5）声明为 final 的方法不能被重写。</span><br><span class="line">6）声明为 static 的方法不能被重写，但是能够被再次声明。</span><br><span class="line">7）子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</span><br><span class="line">8）子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</span><br><span class="line">9）重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</span><br><span class="line">10）构造方法不能被重写。</span><br><span class="line">11）如果不能继承一个类，则不能重写该类的方法。</span><br></pre></td></tr></table></figure>
-<h2 id="2-重载-Overload"><a href="#2-重载-Overload" class="headerlink" title="2.重载(Overload)"></a>2.重载(Overload)</h2><p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。<br>每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。<br>最常用的地方就是构造器的重载。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）被重载的方法必须改变参数列表(参数个数或类型不一样)；</span><br><span class="line">2）被重载的方法可以改变返回类型；</span><br><span class="line">3）被重载的方法可以改变访问修饰符；</span><br><span class="line">4）被重载的方法可以声明新的或更广的检查异常；</span><br><span class="line">5）方法能够在同一个类中或者在一个子类中被重载。</span><br><span class="line">6）无法以返回值类型作为重载函数的区分标准。</span><br></pre></td></tr></table></figure>
-<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1）方法重载是一个类中定义了多个方法名相同,而他们的参数的数量不同或数量相同而类型和次序不同,则称为方法的重载(Overloading)。</span><br><span class="line">2）方法重写是在子类存在方法与父类的方法的名字相同,而且参数的个数与类型一样,返回值也一样的方法,就称为重写(Overriding)。</span><br><span class="line">3）方法重载是一个类的多态性表现,而方法重写是子类与父类的一种多态性表现。</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Java学习</category>
-      </categories>
-      <tags>
-        <tag>重写和重载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello程序的一生</title>
-    <url>/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/</url>
-    <content><![CDATA[<p><img src="file:///C:\Users\22350\AppData\Local\Temp\ksohtml19916\wps1.png" alt="img"> </p>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="/css/wow.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Crispy Chicken" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/2.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2021/06/03/vALs9yqZXQtlaGH.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Crispy Chicken</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hello程序的一生</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-06-21T14:51:01.000Z" title="Created 2021-06-21 22:51:01">2021-06-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-06-21T14:53:24.426Z" title="Updated 2021-06-21 22:53:24">2021-06-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hello程序的一生"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="file:///C:\Users\22350\AppData\Local\Temp\ksohtml19916\wps1.png" alt="img"> </p>
 <p><strong>计算机系统</strong></p>
 <p><strong>大作业</strong></p>
 <p>题   目 程序人生-Hello’s P2P      　</p>
@@ -462,7 +528,7 @@
 <p>2.关闭文件——close()：当应用完成了对文件的访问之后，它就通知内核关闭这个文件。作为响应，内核释放文件打开时创建的数据结构，并将这个描述符恢复到可用的描述符池中。无论一个进程因为何种原因终止时，内核都会关闭所有打开的文件并释放它们的内存资源。</p>
 <p>3.读取文件——read()：read函数从描述符为fd 的当前文件位置复制最多n个字节到内存位置buf。返回值一1表示一个错误，而返回值0表示EOF。否则，返回值表示的是实际传送的字节数量。</p>
 <p>4.写入文件——write()：write函数从内存位置buf复制至多n个字节到描述符fd的当前文件位置。</p>
-<h2 id="8-3-printf的实现分析"><a href="#8-3-printf的实现分析" class="headerlink" title="8.3 printf的实现分析"></a>8.3 printf的实现分析</h2><p><a href="https://www.cnblogs.com/pianist/p/3315801.html%EF%BC%88printf%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%EF%BC%89">https://www.cnblogs.com/pianist/p/3315801.html（printf实现的深入剖析）</a></p>
+<h2 id="8-3-printf的实现分析"><a href="#8-3-printf的实现分析" class="headerlink" title="8.3 printf的实现分析"></a>8.3 printf的实现分析</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/pianist/p/3315801.html%EF%BC%88printf%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%EF%BC%89">https://www.cnblogs.com/pianist/p/3315801.html（printf实现的深入剖析）</a></p>
 <p>从vsprintf生成显示信息，到write系统函数，到陷阱-系统调用 int 0x80或syscall等.</p>
 <p>字符显示驱动子程序：从ASCII到字模库到显示vram（存储每一个点的RGB颜色信息）。</p>
 <p>显示芯片按照刷新频率逐行读取vram，并通过信号线向液晶显示器传输每一个点（RGB分量）。</p>
@@ -527,17 +593,16 @@
 <h1 id="参考文献"><a href="#参考文献" class="headerlink" title="** **参考文献"></a>** **<strong>参考文献</strong></h1><p><strong>为完成本次大作业你翻阅的书籍与网站等</strong></p>
 <p>[1]  林来兴. 空间控制技术[M]. 北京：中国宇航出版社，1992：25-42.</p>
 <p>[2]  辛希孟. 信息技术与信息服务国际研讨会论文集：A集[C]. 北京：中国科学出版社，1999.</p>
-<p>[3]  赵耀东. 新时代的工业工程师[M/OL]. 台北：天下文化出版社，1998 [1998-09-26]. <a href="http://www.ie.nthu.edu.tw/info/ie.newie.htm%EF%BC%88Big5%EF%BC%89">http://www.ie.nthu.edu.tw/info/ie.newie.htm（Big5）</a>.</p>
+<p>[3]  赵耀东. 新时代的工业工程师[M/OL]. 台北：天下文化出版社，1998 [1998-09-26]. <a target="_blank" rel="noopener" href="http://www.ie.nthu.edu.tw/info/ie.newie.htm%EF%BC%88Big5%EF%BC%89">http://www.ie.nthu.edu.tw/info/ie.newie.htm（Big5）</a>.</p>
 <p>[4]  谌颖. 空间交会控制理论与方法研究[D]. 哈尔滨：哈尔滨工业大学，1992：8-13.</p>
 <p>[5] KANAMORI H. Shaking Without Quaking[J]. Science，1998，279（5359）：2063-2064.</p>
-<p>[6] CHRISTINE M. Plant Physiology: Plant Biology in the Genome Era[J/OL]. Science，1998，281：331-332[1998-09-23]. <a href="http://www.sciencemag.org/cgi/">http://www.sciencemag.org/cgi/</a> collection/anatmorp.</p>
-<p>[7]    <a href="https://blog.csdn.net/weixin_41143631/article/details/81221777">https://blog.csdn.net/weixin_41143631/article/details/81221777</a></p>
-<p>[8]  <a href="https://cloud.tencent.com/developer/article/1401978">https://cloud.tencent.com/developer/article/1401978</a></p>
-<p>[9]<a href="https://blog.csdn.net/zhou1519/article/details/21041121?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2">https://blog.csdn.net/zhou1519/article/details/21041121?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2</a></p>
+<p>[6] CHRISTINE M. Plant Physiology: Plant Biology in the Genome Era[J/OL]. Science，1998，281：331-332[1998-09-23]. <a target="_blank" rel="noopener" href="http://www.sciencemag.org/cgi/">http://www.sciencemag.org/cgi/</a> collection/anatmorp.</p>
+<p>[7]    <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41143631/article/details/81221777">https://blog.csdn.net/weixin_41143631/article/details/81221777</a></p>
+<p>[8]  <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1401978">https://cloud.tencent.com/developer/article/1401978</a></p>
+<p>[9]<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhou1519/article/details/21041121?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2">https://blog.csdn.net/zhou1519/article/details/21041121?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2</a></p>
 <p><em><strong>*（参考文献0分，缺失 -1分）*</strong></em></p>
-]]></content>
-      <tags>
-        <tag>计算机系统 Hello程序 Linux系统</tag>
-      </tags>
-  </entry>
-</search>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Crispy Chicken</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/">http://example.com/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F-Hello%E7%A8%8B%E5%BA%8F-Linux%E7%B3%BB%E7%BB%9F/">计算机系统 Hello程序 Linux系统</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/06/03/vALs9yqZXQtlaGH.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/"><img class="next-cover" src="https://i.loli.net/2021/06/03/MqAVWLIzDPiFYr9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java抽象类</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/2.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Crispy Chicken</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HIT-CrispyChicken"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">Welcome to contact me through wechat 18359288669</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">** **第1章 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Hello%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Hello简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%B7%A5%E5%85%B7"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 环境与工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E4%B8%AD%E9%97%B4%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 中间结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">** **第2章 预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E9%A2%84%E5%A4%84%E7%90%86%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%9C%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 预处理的概念与作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E5%9C%A8Ubuntu%E4%B8%8B%E9%A2%84%E5%A4%84%E7%90%86%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">2.2.</span> <span class="toc-text">2.2在Ubuntu下预处理的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Hello%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86%E7%BB%93%E6%9E%9C%E8%A7%A3%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Hello的预处理结果解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%BC%96%E8%AF%91"><span class="toc-number">3.</span> <span class="toc-text">** **第3章 编译</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E7%BC%96%E8%AF%91%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%9C%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 编译的概念与作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%9C%A8Ubuntu%E4%B8%8B%E7%BC%96%E8%AF%91%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 在Ubuntu下编译的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Hello%E7%9A%84%E7%BC%96%E8%AF%91%E7%BB%93%E6%9E%9C%E8%A7%A3%E6%9E%90"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Hello的编译结果解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%B1%87%E7%BC%96"><span class="toc-number">4.</span> <span class="toc-text">** **第4章 汇编</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%B1%87%E7%BC%96%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%9C%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 汇编的概念与作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E5%9C%A8Ubuntu%E4%B8%8B%E6%B1%87%E7%BC%96%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 在Ubuntu下汇编的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E5%8F%AF%E9%87%8D%E5%AE%9A%E4%BD%8D%E7%9B%AE%E6%A0%87elf%E6%A0%BC%E5%BC%8F"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 可重定位目标elf格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Hello-o%E7%9A%84%E7%BB%93%E6%9E%9C%E8%A7%A3%E6%9E%90"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Hello.o的结果解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC5-%E7%AB%A0-%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">** 第5**章 链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%9C%E7%94%A8"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 链接的概念与作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%9C%A8Ubuntu%E4%B8%8B%E9%93%BE%E6%8E%A5%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 在Ubuntu下链接的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6hello%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 可执行目标文件hello的格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-hello%E7%9A%84%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 hello的虚拟地址空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-%E9%93%BE%E6%8E%A5%E7%9A%84%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 链接的重定位过程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-hello%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 hello的执行流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-Hello%E7%9A%84%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%88%86%E6%9E%90"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 Hello的动态链接分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-8-%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">5.8.</span> <span class="toc-text">5.8 本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC6-%E7%AB%A0-hello%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">** 第6**章 hello进程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E4%BD%9C%E7%94%A8"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 进程的概念与作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E7%AE%80%E8%BF%B0%E5%A3%B3Shell-bash%E7%9A%84%E4%BD%9C%E7%94%A8%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 简述壳Shell-bash的作用与处理流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Hello%E7%9A%84fork%E8%BF%9B%E7%A8%8B%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Hello的fork进程创建过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Hello%E7%9A%84execve%E8%BF%87%E7%A8%8B"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Hello的execve过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-Hello%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 Hello的进程执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-hello%E7%9A%84%E5%BC%82%E5%B8%B8%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 hello的异常与信号处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">6.7.</span> <span class="toc-text">6.7本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC7-%E7%AB%A0-hello%E7%9A%84%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">** 第7**章 hello的存储管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-hello%E7%9A%84%E5%AD%98%E5%82%A8%E5%99%A8%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 hello的存储器地址空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Intel%E9%80%BB%E8%BE%91%E5%9C%B0%E5%9D%80%E5%88%B0%E7%BA%BF%E6%80%A7%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E6%8D%A2-%E6%AE%B5%E5%BC%8F%E7%AE%A1%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Intel逻辑地址到线性地址的变换-段式管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Hello%E7%9A%84%E7%BA%BF%E6%80%A7%E5%9C%B0%E5%9D%80%E5%88%B0%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8F%98%E6%8D%A2-%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Hello的线性地址到物理地址的变换-页式管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-TLB%E4%B8%8E%E5%9B%9B%E7%BA%A7%E9%A1%B5%E8%A1%A8%E6%94%AF%E6%8C%81%E4%B8%8B%E7%9A%84VA%E5%88%B0PA%E7%9A%84%E5%8F%98%E6%8D%A2"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 TLB与四级页表支持下的VA到PA的变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-%E4%B8%89%E7%BA%A7Cache%E6%94%AF%E6%8C%81%E4%B8%8B%E7%9A%84%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 三级Cache支持下的物理内存访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-6-hello%E8%BF%9B%E7%A8%8Bfork%E6%97%B6%E7%9A%84%E5%86%85%E5%AD%98%E6%98%A0%E5%B0%84"><span class="toc-number">7.6.</span> <span class="toc-text">7.6 hello进程fork时的内存映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-7-hello%E8%BF%9B%E7%A8%8Bexecve%E6%97%B6%E7%9A%84%E5%86%85%E5%AD%98%E6%98%A0%E5%B0%84"><span class="toc-number">7.7.</span> <span class="toc-text">7.7 hello进程execve时的内存映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-8-%E7%BC%BA%E9%A1%B5%E6%95%85%E9%9A%9C%E4%B8%8E%E7%BC%BA%E9%A1%B5%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86"><span class="toc-number">7.8.</span> <span class="toc-text">7.8 缺页故障与缺页中断处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-9%E5%8A%A8%E6%80%81%E5%AD%98%E5%82%A8%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86"><span class="toc-number">7.9.</span> <span class="toc-text">7.9动态存储分配管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-10%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">7.10.</span> <span class="toc-text">7.10本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC8-%E7%AB%A0-hello%E7%9A%84IO%E7%AE%A1%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text">** 第8**章 hello的IO管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Linux%E7%9A%84IO%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 Linux的IO设备管理方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E7%AE%80%E8%BF%B0Unix-IO%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%85%B6%E5%87%BD%E6%95%B0"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 简述Unix IO接口及其函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-printf%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%88%86%E6%9E%90"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 printf的实现分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-getchar%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%88%86%E6%9E%90"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 getchar的实现分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5%E6%9C%AC%E7%AB%A0%E5%B0%8F%E7%BB%93"><span class="toc-number">8.5.</span> <span class="toc-text">8.5本章小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">9.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E4%BB%B6"><span class="toc-number">10.</span> <span class="toc-text">** **附件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">11.</span> <span class="toc-text">** **参考文献</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/" title="Hello程序的一生"><img src="https://i.loli.net/2021/06/03/vALs9yqZXQtlaGH.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello程序的一生"/></a><div class="content"><a class="title" href="/2021/06/21/Hello%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%B8%80%E7%94%9F/" title="Hello程序的一生">Hello程序的一生</a><time datetime="2021-06-21T14:51:01.000Z" title="Created 2021-06-21 22:51:01">2021-06-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/" title="Java抽象类"><img src="https://i.loli.net/2021/06/03/MqAVWLIzDPiFYr9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java抽象类"/></a><div class="content"><a class="title" href="/2021/06/02/Java%E6%8A%BD%E8%B1%A1%E7%B1%BB/" title="Java抽象类">Java抽象类</a><time datetime="2021-06-02T14:24:16.000Z" title="Created 2021-06-02 22:24:16">2021-06-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/" title="Java重写和重载"><img src="https://i.loli.net/2021/06/03/VDKBqNuvATcoRLj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java重写和重载"/></a><div class="content"><a class="title" href="/2021/06/02/Java%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/" title="Java重写和重载">Java重写和重载</a><time datetime="2021-06-02T12:14:22.000Z" title="Created 2021-06-02 20:14:22">2021-06-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/10/Welcome/" title="Welcome"><img src="https://i.loli.net/2021/06/03/MqAVWLIzDPiFYr9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Welcome"/></a><div class="content"><a class="title" href="/2021/05/10/Welcome/" title="Welcome">Welcome</a><time datetime="2021-05-10T09:05:28.000Z" title="Created 2021-05-10 17:05:28">2021-05-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/09/hello-world/" title="Hello World"><img src="https://i.loli.net/2021/06/03/MqAVWLIzDPiFYr9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/05/09/hello-world/" title="Hello World">Hello World</a><time datetime="2021-05-09T14:43:35.823Z" title="Created 2021-05-09 22:43:35">2021-05-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Crispy Chicken</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="25px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
