@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-29T09:43:12.824Z</updated>
+  <updated>2021-06-29T09:48:37.815Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://example.com/2021/06/29/Java%E5%A4%9A%E6%80%81/"/>
     <id>http://example.com/2021/06/29/Java%E5%A4%9A%E6%80%81/</id>
     <published>2021-06-29T09:42:09.000Z</published>
-    <updated>2021-06-29T09:43:12.824Z</updated>
+    <updated>2021-06-29T09:48:37.815Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Java-多态"><a href="#Java-多态" class="headerlink" title="*Java 多态*"></a><em><strong>*Java 多态*</strong></em></h1><hr><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p><p>多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：</p><p><img src="https://i.loli.net/2021/06/29/vbs6h27uU4LrB3m.png" alt="java-polymorphism-111.png"></p><h3 id="多态的优点"><a href="#多态的优点" class="headerlink" title="*多态的优点*"></a><em><strong>*多态的优点*</strong></em></h3><p>· 1. 消除类型之间的耦合关系</p><p>· 2. 可替换性</p><p>· 3. 可扩充性</p><p>· 4. 接口性</p><p>· 5. 灵活性</p><p>· 6. 简化性</p><h3 id="多态存在的三个必要条件"><a href="#多态存在的三个必要条件" class="headerlink" title="*多态存在的三个必要条件*"></a><em><strong>*多态存在的三个必要条件*</strong></em></h3><p>· 继承</p><p>· 重写</p><p>· 父类引用指向子类对象：<em><strong>*Parent p = new Child();*</strong></em></p><p><img src="https://i.loli.net/2021/06/29/QT6rB4bYMkqdCAi.png" alt="java-polymorphism-222.png"></p><p>当使用多态方式调用方法时，首先检查父类中是否有该方法，如果没有，则编译错误；如果有，再去调用子类的同名方法。</p><p>多态的好处：可以使程序有良好的扩展，并可以对所有类的对象进行通用处理。</p><h2 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="*多态的实现方式*"></a><em><strong>*多态的实现方式*</strong></em></h2><h3 id="方式一：重写："><a href="#方式一：重写：" class="headerlink" title="*方式一：重写：*"></a><em><strong>*方式一：重写：*</strong></em></h3><h3 id="方式二：接口"><a href="#方式二：接口" class="headerlink" title="*方式二：接口*"></a><em><strong>*方式二：接口*</strong></em></h3><h3 id="方式三：抽象类和抽象方法"><a href="#方式三：抽象类和抽象方法" class="headerlink" title="*方式三：抽象类和抽象方法*"></a><em><strong>*方式三：抽象类和抽象方法*</strong></em></h3>]]></content>
+    <content type="html"><![CDATA[<h1 id="Java-多态"><a href="#Java-多态" class="headerlink" title="Java 多态"></a>Java 多态</h1><hr><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p><p>多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：</p><p><img src="https://i.loli.net/2021/06/29/vbs6h27uU4LrB3m.png" alt="java-polymorphism-111.png"></p><h3 id="多态的优点"><a href="#多态的优点" class="headerlink" title="多态的优点"></a>多态的优点</h3><p>· 1. 消除类型之间的耦合关系</p><p>· 2. 可替换性</p><p>· 3. 可扩充性</p><p>· 4. 接口性</p><p>· 5. 灵活性</p><p>· 6. 简化性</p><h3 id="多态存在的三个必要条件"><a href="#多态存在的三个必要条件" class="headerlink" title="多态存在的三个必要条件"></a>多态存在的三个必要条件</h3><p>· 继承</p><p>· 重写</p><p>· 父类引用指向子类对象：Parent p = new Child();</p><p><img src="https://i.loli.net/2021/06/29/QT6rB4bYMkqdCAi.png" alt="java-polymorphism-222.png"></p><p>当使用多态方式调用方法时，首先检查父类中是否有该方法，如果没有，则编译错误；如果有，再去调用子类的同名方法。</p><p>多态的好处：可以使程序有良好的扩展，并可以对所有类的对象进行通用处理。</p><h2 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h2><h3 id="方式一：重写"><a href="#方式一：重写" class="headerlink" title="方式一：重写"></a>方式一：重写</h3><h3 id="方式二：接口"><a href="#方式二：接口" class="headerlink" title="方式二：接口"></a>方式二：接口</h3><h3 id="方式三：抽象类和抽象方法"><a href="#方式三：抽象类和抽象方法" class="headerlink" title="方式三：抽象类和抽象方法"></a>方式三：抽象类和抽象方法</h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Java-多态&quot;&gt;&lt;a href=&quot;#Java-多态&quot; class=&quot;headerlink&quot; title=&quot;*Java 多态*&quot;&gt;&lt;/a&gt;&lt;em&gt;&lt;strong&gt;*Java 多态*&lt;/strong&gt;&lt;/em&gt;&lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;多态是同一个行为具有多个不同表</summary>
+    <summary type="html">&lt;h1 id=&quot;Java-多态&quot;&gt;&lt;a href=&quot;#Java-多态&quot; class=&quot;headerlink&quot; title=&quot;Java 多态&quot;&gt;&lt;/a&gt;Java 多态&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;多态是同一个行为具有多个不同表现形式或形态的能力。&lt;/p&gt;
+&lt;p&gt;多态就是同一个接口，使用</summary>
       
     
     
