@@ -166,6 +166,30 @@
   </entry>
   
   <entry>
+    <title>Java集合框架</title>
+    <link href="http://example.com/2021/05/25/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    <id>http://example.com/2021/05/25/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</id>
+    <published>2021-05-25T13:26:33.000Z</published>
+    <updated>2021-07-07T13:29:09.761Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java-集合框架"><a href="#Java-集合框架" class="headerlink" title="Java 集合框架"></a>Java 集合框架</h1><p>早在 Java 2 中之前，Java 就提供了特设类。比如：Dictionary, Vector, Stack, 和 Properties 这些类用来存储和操作对象组。</p><p>虽然这些类都非常有用，但是它们缺少一个核心的，统一的主题。由于这个原因，使用 Vector 类的方式和使用 Properties 类的方式有着很大不同。</p><p>集合框架被设计成要满足以下几个目标。</p><ul><li>该框架必须是高性能的。基本集合（动态数组，链表，树，哈希表）的实现也必须是高效的。</li><li>该框架允许不同类型的集合，以类似的方式工作，具有高度的互操作性。</li><li>对一个集合的扩展和适应必须是简单的。</li></ul><p>为此，整个集合框架就围绕一组标准接口而设计。你可以直接使用这些接口的标准实现，诸如： <strong>LinkedList</strong>, <strong>HashSet</strong>, 和 <strong>TreeSet</strong> 等,除此之外你也可以通过这些接口实现自己的集合。</p><p><img src="https://i.loli.net/2021/07/07/I5oFZtbxQVyidCr.gif" alt="2243690-9cd9c896e0d512ed.gif"></p><p>从上面的集合框架图可以看到，Java 集合框架主要包括两种类型的容器，一种是集合（Collection），存储一个元素集合，另一种是图（Map），存储键/值对映射。Collection 接口又有 3 种子类型，List、Set 和 Queue，再下面是一些抽象类，最后是具体实现类，常用的有 <a href="https://www.runoob.com/java/java-arraylist.html">ArrayList</a>、<a href="https://www.runoob.com/java/java-linkedlist.html">LinkedList</a>、<a href="https://www.runoob.com/java/java-hashset.html">HashSet</a>、LinkedHashSet、<a href="https://www.runoob.com/java/java-hashmap.html">HashMap</a>、LinkedHashMap 等等。</p><p>集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：</p><ul><li><p><strong>接口：</strong>是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象</p></li><li><p><strong>实现（类）：</strong>是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。</p></li><li><p><strong>算法：</strong>是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Java-集合框架&quot;&gt;&lt;a href=&quot;#Java-集合框架&quot; class=&quot;headerlink&quot; title=&quot;Java 集合框架&quot;&gt;&lt;/a&gt;Java 集合框架&lt;/h1&gt;&lt;p&gt;早在 Java 2 中之前，Java 就提供了特设类。比如：Dictionary, </summary>
+      
+    
+    
+    
+    <category term="Java学习" scheme="http://example.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Java集合框架" scheme="http://example.com/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java初遇</title>
     <link href="http://example.com/2021/05/10/Java%E5%88%9D%E9%81%87/"/>
     <id>http://example.com/2021/05/10/Java%E5%88%9D%E9%81%87/</id>
